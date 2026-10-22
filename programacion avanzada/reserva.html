@@ -1,85 +1,91 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro - Chill d Balls</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Revisar Reserva - EnferPacient</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <header class="encabezado py-3 text-center">
-        <div class="container d-flex flex-column align-items-center position-relative">
-        
-            <div class="position-absolute end-0 top-0 mt-2 me-2">
-                <a href="Index.html" class="btn btn-outline-light btn-sm fw-bold me-1">Login</a>
-            </div>
+<header class="encabezado py-3 text-center">
+    <div class="container d-flex flex-column align-items-center">
 
-            <a href="index.html" class="mb-2">
-            <img src="img/logo.png" alt="Chill d Balls Logo" class="mi-logo">
-            </a>
+        <a href="index.html" class="mb-2">
+            <img src="img/logo.png" alt="EnferPacient Logo" class="mi-logo">
+        </a>
+
+        <div class="text-center">
+            <h1 class="h2 m-0 fw-bold">EnferPacient</h1>
+            <small>La salud es la vida</small>
+        </div>
+
+    </div>
+</header>
+
+<div class="container my-5 d-flex justify-content-center">
+    <div class="col-12 col-md-8 col-lg-5">
+        <div class="caja-producto p-4 text-start">
+
+            <h3 class="text-center mb-4 fw-bold">Revisar mi reserva</h3>
+
+            <form action="consultar_reserva.php" method="POST">
+
+                <div class="mb-3">
+                    <label for="id_usuario" class="form-label fw-bold">
+                        ID de usuario:
+                    </label>
+
+                    <input
+                        type="number"
+                        class="form-control"
+                        id="id_usuario"
+                        name="id_usuario"
+                        placeholder="Ingresa tu ID de usuario"
+                        min="1"
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="id_enfermero" class="form-label fw-bold">
+                        ID del enfermero (opcional):
+                    </label>
+
+                    <input
+                        type="number"
+                        class="form-control"
+                        id="id_enfermero"
+                        name="id_enfermero"
+                        placeholder="Ingresa el ID del enfermero"
+                        min="1"
+                    >
+                </div>
+
+                <button type="submit" class="btn-comprar w-100 py-2 mb-3">
+                    Buscar reserva
+                </button>
+
+            </form>
 
             <div class="text-center">
-                <h1 class="h2 m-0 fw-bold">Enferpacient</h1>
-                <small>Bienvenido</small>
+                <small>
+                    <a href="index.html" class="text-muted text-decoration-none">
+                        Volver al inicio
+                    </a>
+                </small>
             </div>
 
-        </div>
-    </header>
-
-    <div class="container my-5 d-flex justify-content-center">
-        <div class="col-12 col-md-8 col-lg-5">
-            <div class="caja-producto p-4 text-start">
-                <h3 class="text-center mb-4 fw-bold">Busca tu reserva</h3>
-                
-                <form action="#" method="POST">
-                    
-                    <div class="mb-3">
-                        <label for="reg-nombre" class="form-label fw-bold">ID USUARIO:</label>
-                        <input type="text" class="form-control" id="reg-nombre" placeholder="ID que se te asigno" required minlength="3">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="reg-email" class="form-label fw-bold">ID ENFERMERO:</label>
-                        <input type="email" class="form-control" id="reg-email" placeholder="ID que te brindo el enfermero" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label>Fecha:</label>
-                        <input type="date" placeholder="dd/mm/aaaa"> 
-                    </div>
-                        
-                    <div class="mb-3">
-                        <label>Tipo de servicio:</label>
-
-                        <input type="checkbox" value="Técnico"> <span>Enfermeria </span>
-                        <input type="checkbox" value="Técnologo"> <span>Cuidado a adultos  </span>
-                        <input type="checkbox" value="Especialización"> <span>Revision general </span>
-                    </div>
-
-                    <div class="mb-3">
-                        <label>Estado</label>
-                        <select name="estado de reserva" id=""> 
-                            <option value="0">Seleccione</option>
-                            <option value="1">Activo </option>
-                            <option value="2">Inactivo </option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn-comprar w-100 py-2 mb-3">Registrarme</button>
-                </form>
-            </div>
         </div>
     </div>
-       <div class="text-center">
-                        <small><a href="index.html" class="text-muted text-decoration-none">Vuelve al inicio</a></small>
-                    </div>
-    <footer class="pie-pagina text-center py-3">
-        <p class="m-0">© 2026 EnferPacient - La salud es la vida</p>
-    </footer>
+</div>
+
+<footer class="pie-pagina text-center py-3">
+    <p class="m-0">© 2026 EnferPacient - La salud es la vida</p>
+</footer>
 
 </body>
 </html>

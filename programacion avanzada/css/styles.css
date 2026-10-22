@@ -17,7 +17,6 @@ body {
     line-height: 1.6;
 }
 
-/* ENCABEZADO */
 .encabezado {
     background-color: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(12px);
@@ -26,7 +25,6 @@ body {
     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
     padding: 15px 30px;
     
-    /* LOGO AL LADO */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,10 +33,9 @@ body {
 .mi-logo {
     width: 180px;
     height: auto;
-    margin: 0; /* quita el auto */
+    margin: 0; 
     display: block;
 }
-/* TITULO */
 .titulo-seccion {
     background: transparent;
     display: block;
@@ -66,7 +63,6 @@ body {
     margin-bottom: 40px;
 }
 
-/* TARJETAS DE SERVICIO */
 .caja-producto {
     background-color: rgba(255, 255, 255, 0.96);
     border: 1px solid rgba(30, 173, 240, 0.15);
@@ -93,12 +89,16 @@ body {
     font-size: 0.92rem;
 }
 
-.foto-zapato {
+.foto {
     width: 100%;
     height: 210px;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
     border-radius: 14px;
     border: none;
+    display: block;
+    background-color: #ffffff;
+    padding: 8px;
 }
 
 .precio {
@@ -133,7 +133,6 @@ body {
     color: white;
 }
 
-/* FOOTER */
 .pie-pagina {
     background-color: var(--azul-oscuro);
     color: white;

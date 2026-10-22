@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,103 +9,163 @@
     <title>EnferPacient</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .menu-enferpacient {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .menu-enferpacient a {
+            border-radius: 20px;
+            padding: 8px 14px;
+            font-size: 13px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            white-space: normal;
+        }
+
+        .boton-usuario {
+            background: #0B3D7A;
+            color: white;
+        }
+
+        .boton-verde {
+            background: #C2FF36;
+            color: #0B3D7A;
+        }
+
+        .menu-enferpacient a:hover {
+            opacity: 0.85;
+        }
+
+        .btn-comprar {
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
 <header class="encabezado py-3 px-4">
-    <div class="container d-flex flex-row align-items-center justify-content-between flex-wrap">
-    
+    <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3">
+
         <div class="d-flex align-items-center">
-            <a href="index.html" class="mb-0 me-3">
+            <a href="index.html" class="me-3">
                 <img src="img/logo.png" alt="Enferpacient Logo" class="mi-logo">
             </a>
+
             <div class="text-start">
                 <h1 class="h2 m-0 fw-bold">EnferPacient</h1>
                 <small>La salud es la vida</small>
             </div>
         </div>
 
-        <div class="d-flex gap-2 mt-2 mt-md-0">
-            <a href="usuario_login.html" class="btn btn-sm fw-bold" style="background:#0B3D7A; color:white; border-radius:20px; padding:6px 14px;">Ingresa a Usuario</a>
-            <a href="enfermero_registro.html" class="btn btn-sm fw-bold" style="background:#C2FF36; color:#0B3D7A; border-radius:20px; padding:6px 14px;">Ingreso a Enfermero</a>
-            <a href="reserva.html" class="btn btn-sm fw-bold" style="background:#C2FF36; color:#0B3D7A; border-radius:20px; padding:6px 14px;">Revisar Reserva</a>
-        </div>
+        <nav class="menu-enferpacient">
+            <a href="usuario_login.html" class="boton-usuario">
+                Ingresa a Usuario
+            </a>
+
+            <a href="enfermero_login.html" class="boton-verde">
+                Ingreso Enfermero
+            </a>
+
+            <a href="enfermero_registro.html" class="boton-verde">
+                Registro de Enfermero
+            </a>
+
+            <a href="usuario_login.html" class="boton-verde">
+                Agendar / Revisar Reserva
+            </a>
+
+            <a href="administrador.html" class="boton-verde">
+                Administradores
+            </a>
+        </nav>
 
     </div>
 </header>
 
-    <div class="container my-4 text-center">
-        
-        <h2 class="titulo-seccion">Nuestros Servicios de Cuidado</h2>
-        <p class="subtitulo-seccion mb-4">Atención profesional, humana y a domicilio</p>
+<div class="container my-4 text-center">
 
-        <div class="row g-4">
+    <h2 class="titulo-seccion">Nuestros Servicios de Cuidado</h2>
+    <p class="subtitulo-seccion mb-4">Atención profesional, humana y a domicilio</p>
 
-            <div class="col-12 col-md-4">
-                <div class="caja-producto text-center p-3">
-                    <img src="img/img1.jpeg" alt="Cuidado de Adulto Mayor" class="foto-zapato mb-3">
-                    <h3>Cuidado de Adulto Mayor</h3>
-                    <p>Asistencia integral 12h o 24h, higiene, movilización y compañía con trato humano.</p>
-                    <p class="precio">Desde $80.000 COP / día</p>
-                    <button class="btn-comprar">Solicitar servicio</button>
-                </div>
+    <div class="row g-4">
+
+        <div class="col-12 col-md-4">
+            <div class="caja-producto text-center p-3">
+                <img src="img/img1.jpeg" alt="Cuidado de Adulto Mayor" class="foto">
+                <h3>Cuidado de Adulto Mayor</h3>
+                <p>Asistencia integral 12h o 24h, higiene, movilización y compañía con trato humano.</p>
+                <p class="precio">Desde $80.000 COP / día</p>
+                <a href="usuario_login.html" class="btn-comprar">Solicitar servicio</a>
             </div>
-
-            <div class="col-12 col-md-4">
-                <div class="caja-producto text-center p-3">
-                    <img src="img/img2.jpeg" alt="Enfermería a Domicilio" class="foto-zapato mb-3">
-                    <h3>Enfermería a Domicilio</h3>
-                    <p>Personal certificado para aplicación de medicamentos, curaciones y post-operatorio.</p>
-                    <p class="precio">Desde $60.000 COP / visita</p>
-                    <button class="btn-comprar">Agendar enfermera</button>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4">
-                <div class="caja-producto text-center p-3">
-                    <img src="img/img3.jpeg" alt="Control de Signos Vitales" class="foto-zapato mb-3">
-                    <h3>Control de Signos Vitales</h3>
-                    <p>Monitoreo de presión, glucosa, saturación y frecuencia cardiaca con reporte.</p>
-                    <p class="precio">Desde $35.000 COP</p>
-                    <button class="btn-comprar">Ver detalle</button>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4">
-                <div class="caja-producto text-center p-3">
-                    <img src="img/img4.jpeg" alt="Diagnóstico General" class="foto-zapato mb-3">
-                    <h3>Diagnóstico General</h3>
-                    <p>Valoración inicial por profesional de salud para definir plan de cuidado.</p>
-                    <p class="precio">Desde $70.000 COP</p>
-                    <button class="btn-comprar">Solicitar valoración</button>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4">
-                <div class="caja-producto text-center p-3">
-                    <img src="img/img5.jpeg" alt="Curaciones Avanzadas" class="foto-zapato mb-3">
-                    <h3>Curaciones y Sueroterapia</h3>
-                    <p>Manejo de heridas, escaras, úlceras y administración de sueros vitaminados.</p>
-                    <p class="precio">Desde $50.000 COP</p>
-                    <button class="btn-comprar">Ver detalle</button>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4">
-                <div class="caja-producto text-center p-3">
-                    <img src="img/img6.jpeg" alt="Acompañamiento Hospitalario" class="foto-zapato mb-3">
-                    <h3>Acompañamiento Hospitalario</h3>
-                    <p>Enfermera acompañante en clínica u hospital para tranquilidad de la familia.</p>
-                    <p class="precio">Desde $90.000 COP / turno</p>
-                    <button class="btn-comprar">Reservar ahora</button>
-                </div>
-            </div>
-
         </div>
-            <footer class="pie-pagina text-center py-3">
-        <p class="m-0">© 2026 EnferPacient - La salud es la vida</p>
-    </footer>
+
+        <div class="col-12 col-md-4">
+            <div class="caja-producto text-center p-3">
+                <img src="img/img2.jpeg" alt="Enfermería a Domicilio" class="foto">
+                <h3>Enfermería a Domicilio</h3>
+                <p>Personal certificado para aplicación de medicamentos, curaciones y post-operatorio.</p>
+                <p class="precio">Desde $60.000 COP / visita</p>
+                <a href="usuario_login.html" class="btn-comprar">Agendar enfermera</a>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="caja-producto text-center p-3">
+                <img src="img/img3.jpeg" alt="Control de Signos Vitales" class="foto">
+                <h3>Control de Signos Vitales</h3>
+                <p>Monitoreo de presión, glucosa, saturación y frecuencia cardiaca con reporte.</p>
+                <p class="precio">Desde $35.000 COP</p>
+                <a href="usuario_login.html" class="btn-comprar">Ver detalle</a>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="caja-producto text-center p-3">
+                <img src="img/img4.jpeg" alt="Diagnóstico General" class="foto">
+                <h3>Diagnóstico General</h3>
+                <p>Valoración inicial por profesional de salud para definir plan de cuidado.</p>
+                <p class="precio">Desde $70.000 COP</p>
+                <a href="usuario_login.html" class="btn-comprar">Solicitar valoración</a>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="caja-producto text-center p-3">
+                <img src="img/img5.jpeg" alt="Curaciones Avanzadas" class="foto">
+                <h3>Curaciones y Sueroterapia</h3>
+                <p>Manejo de heridas, escaras, úlceras y administración de sueros vitaminados.</p>
+                <p class="precio">Desde $50.000 COP</p>
+                <a href="usuario_login.html" class="btn-comprar">Ver detalle</a>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="caja-producto text-center p-3">
+                <img src="img/img6.jpeg" alt="Acompañamiento Hospitalario" class="foto">
+                <h3>Acompañamiento Hospitalario</h3>
+                <p>Enfermera acompañante en clínica u hospital para tranquilidad de la familia.</p>
+                <p class="precio">Desde $90.000 COP / turno</p>
+                <a href="usuario_login.html" class="btn-comprar">Reservar ahora</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="pie-pagina text-center py-3">
+    <p class="m-0">© 2026 EnferPacient - La salud es la vida</p>
+</footer>
+
 </body>
 </html>

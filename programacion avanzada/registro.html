@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -41,31 +42,31 @@
                     <small style="color:#64748b;">Tu bienestar nos une. Crea tu cuenta para continuar con tu cuidado.</small>
                 </div>
                 
-                <form action="#" method="POST">
+                <form action="guardar_registro.php" method="POST">
                     
                     <div class="mb-3">
                         <label for="reg-nombre" class="form-label fw-bold">Nombre Completo:</label>
-                        <input type="text" class="form-control" id="reg-nombre" placeholder="Tu Nombre y Apellido" required minlength="3" style="border-radius:10px;">
+                        <input type="text" class="form-control" id="reg-nombre" name="nombre" placeholder="Tu Nombre y Apellido" required minlength="3" style="border-radius:10px;">
                     </div>
 
                     <div class="mb-3">
                         <label for="reg-email" class="form-label fw-bold">Correo Electrónico:</label>
-                        <input type="email" class="form-control" id="reg-email" placeholder="ejemplo@correo.com" required style="border-radius:10px;">
+                        <input type="email" class="form-control" id="reg-email" name="correo" placeholder="ejemplo@correo.com" required style="border-radius:10px;">
                     </div>
 
                     <div class="mb-3">
                         <label for="reg-tel" class="form-label fw-bold">Teléfono (10 dígitos):</label>
-                        <input type="number" class="form-control" id="reg-tel" placeholder="3001234567" pattern="[0-9]{10}" style="border-radius:10px;">
+                        <input type="tel" class="form-control" id="reg-tel" name="telefono" placeholder="3001234567" pattern="[0-9]{10}" maxlength="10" style="border-radius:10px;">
                     </div>
 
                     <div class="mb-3">
                         <label for="reg-password" class="form-label fw-bold">Contraseña:</label>
-                        <input type="password" class="form-control" id="reg-password" placeholder="Mínimo 6 caracteres" required minlength="6" style="border-radius:10px;">
+                        <input type="password" class="form-control" id="reg-password" name="contrasena" placeholder="Mínimo 6 caracteres" required minlength="6" style="border-radius:10px;">
                     </div>
 
                     <div class="mb-3">
                         <label for="reg-password-confirm" class="form-label fw-bold">Confirmar Contraseña:</label>
-                        <input type="password" class="form-control" id="reg-password-confirm" placeholder="Repite tu contraseña" required minlength="6" style="border-radius:10px;">
+                        <input type="password" class="form-control" id="reg-password-confirm" name="confirmar" placeholder="Repite tu contraseña" required minlength="6" style="border-radius:10px;">
                     </div>
 
                     <button type="submit" class="btn-comprar w-100 py-2 mb-3">Registrarme</button>

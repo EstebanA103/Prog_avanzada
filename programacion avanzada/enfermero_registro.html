@@ -1,30 +1,31 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de enfermeros</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Registro de enfermeros - EnferPacient</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
     <header class="encabezado py-3 text-center">
         <div class="container d-flex flex-column align-items-center position-relative">
-        
+
             <div class="position-absolute end-0 top-0 mt-2 me-2">
                 <a href="usuario_login.html" class="btn btn-outline-light btn-sm fw-bold me-1">¿Eres usuario?</a>
             </div>
 
             <a href="index.html" class="mb-2">
-            <img src="img/logo.png" alt="Chill d Balls Logo" class="mi-logo">
+                <img src="img/logo.png" alt="Chill d Balls Logo" class="mi-logo">
             </a>
 
             <div class="text-center">
-                <h1 class="h2 m-0 fw-bold">Bienvenido a la seccion de enfermero</h1>
-                <small>Ingresa para empezar a trabajar</small>
+                <h1 class="h2 m-0 fw-bold">Bienvenido a la sección de enfermero</h1>
+                <small>Registrate para empezar a trabajar</small>
             </div>
 
         </div>
@@ -33,52 +34,69 @@
     <div class="container my-5 d-flex justify-content-center">
         <div class="col-12 col-md-8 col-lg-5">
             <div class="caja-producto p-4 text-start">
-                <h3 class="text-center mb-4 fw-bold">Ingreso de enfermeros</h3>
-                
-                <form action="#" method="POST">
-                    
+                <h3 class="text-center mb-4 fw-bold">Registro de enfermeros</h3>
+
+                <form action="guardar_enfermero.php" method="POST">
+
                     <div class="mb-3">
-                        <label for="reg-nombre" class="form-label fw-bold">Nombre:</label>
-                        <input type="text" class="form-control" id="NBRE" placeholder="Tus Nombres" required minlength="3">
+                        <label for="NBRE" class="form-label fw-bold">Nombre:</label>
+                        <input type="text" class="form-control" id="NBRE"
+                               name="nombre" placeholder="Tus Nombres"
+                               required minlength="3">
                     </div>
 
                     <div class="mb-3">
-                        <label for="reg-email" class="form-label fw-bold">Apellido:</label>
-                        <input type="email" class="form-control" id="AP" placeholder="Tus Apellidos" required>
+                        <label for="AP" class="form-label fw-bold">Apellido:</label>
+                        <input type="text" class="form-control" id="AP"
+                               name="apellido" placeholder="Tus Apellidos" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="correo" class="form-label fw-bold">Correo electrónico:</label>
+                        <input type="email" class="form-control"
+                               id="correo" name="correo"
+                               placeholder="enfermero@correo.com" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="reg-tel" class="form-label fw-bold">Teléfono (10 dígitos):</label>
-                        <input type="number" class="form-control" id="reg-tel" placeholder="3001234567" pattern="[0-9]{10}"    >
+                        <input type="tel" class="form-control" id="reg-tel"
+                               name="telefono" placeholder="3001234567"
+                               pattern="[0-9]{10}" maxlength="10" required>
                     </div>
 
                     <div class="mb-3">
-                     <label>Especialidad</label>
-                    <select name="espe" id=""> 
-                        <option value="0">-Seleccione- </option>
-                        <option value="1">Enfermero </option>
-                        <option value="2">Cuidado de adulto </option>
-                        <option value="3">Revision general </option>
-                     </select>
+                        <label for="especialidad" class="form-label fw-bold">Especialidad</label>
+                        <select class="form-select" name="especialidad" id="especialidad" required>
+                            <option value="">-Seleccione-</option>
+                            <option value="Enfermero">Enfermero</option>
+                            <option value="Cuidado de adulto">Cuidado de adulto</option>
+                            <option value="Revision general">Revisión general</option>
+                        </select>
                     </div>
 
                     <div class="mb-3">
-                     <label>Disponibilidad</label>
-                    <select name="espe" id=""> 
-                        <option value="0">-Seleccione- </option>
-                        <option value="1">Activo </option>
-                        <option value="2">Inactivo </option>
-                     </select>
+                        <label for="disponibilidad" class="form-label fw-bold">Disponibilidad</label>
+                        <select class="form-select" name="disponible" id="disponibilidad" required>
+                            <option value="">-Seleccione-</option>
+                            <option value="1">Activo</option>
+                            <option value="0">Inactivo</option>
+                        </select>
                     </div>
+
                     <div class="mb-3">
-                        <label for="login_contraseña" class="form-label fw-bold">Contraseña:</label>
-                        <input type="password" class="form-control" id="login_contraseña" placeholder="••••••••" required minlength="6">
+                        <label for="login_contrasena" class="form-label fw-bold">Contraseña:</label>
+                        <input type="password" class="form-control"
+                               id="login_contrasena" name="contrasena"
+                               placeholder="••••••••" required minlength="6">
                     </div>
+
                     <button type="submit" class="btn-comprar w-100 py-2 mb-3">Ingresar</button>
 
                     <div class="text-center">
                         <small><a href="index.html" class="text-muted text-decoration-none">Vuelve al inicio</a></small>
                     </div>
+
                 </form>
             </div>
         </div>

@@ -1,0 +1,117 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesion Administrador - EnferPacient</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado py-3 px-4">
+        <div class="container d-flex flex-row align-items-center justify-content-between flex-wrap">
+
+            <div class="d-flex align-items-center">
+                <a href="index.html" class="mb-0 me-3">
+                    <img src="img/logo.png" alt="EnferPacient Logo" class="mi-logo">
+                </a>
+
+                <div class="text-start">
+                    <h1 class="h2 m-0 fw-bold">EnferPacient</h1>
+                    <small>La salud es la vida</small>
+                </div>
+            </div>
+
+            <div class="d-flex gap-2 mt-2 mt-md-0">
+                <a href="index.html" class="btn btn-sm fw-bold"
+                   style="background:#1EADF0; color:white; border-radius:20px; padding:6px 14px;">
+                    Volver al Inicio
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- INICIO DE SESIÓN ADMINISTRADOR -->
+    <div class="container my-5 d-flex justify-content-center">
+        <div class="col-12 col-md-8 col-lg-5">
+
+            <div class="caja-producto p-4 text-start">
+
+                <div class="text-center mb-4">
+                    <h3 class="fw-bold m-0" style="color:#0B3D7A;">
+                        INICIO DE ADMINISTRADOR
+                    </h3>
+
+                    <small style="color:#64748b;">
+                        Administración y gestión de EnferPacient.
+                    </small>
+                </div>
+
+                <form action="administrador_login.php" method="POST">
+
+                    <!-- CORREO -->
+                    <div class="mb-3">
+                        <label for="admin-email" class="form-label fw-bold">
+                            Correo Electrónico:
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="admin-email"
+                            name="correo"
+                            placeholder="admin@enferpacient.com"
+                            required
+                            style="border-radius:10px;">
+                    </div>
+
+                    <!-- CONTRASEÑA -->
+                    <div class="mb-3">
+                        <label for="admin-password" class="form-label fw-bold">
+                            Contraseña:
+                        </label>
+
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="admin-password"
+                            name="contrasena"
+                            placeholder="Ingresa tu contraseña"
+                            required
+                            style="border-radius:10px;">
+                    </div>
+
+                    <button type="submit" class="btn-comprar w-100 py-2 mb-3">
+                        Iniciar Administrador
+                    </button>
+
+                    <div class="text-center">
+                        <br>
+
+                        <small>
+                            <a href="index.html" class="text-muted text-decoration-none">
+                                Volver al inicio
+                            </a>
+                        </small>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="pie-pagina text-center py-3">
+        <p class="m-0">© 2026 EnferPacient - La salud es la vida</p>
+    </footer>
+
+</body>
+</html>

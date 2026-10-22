@@ -1,0 +1,157 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de Enfermeros - EnferPacient</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #E6F4FF, #ffffff);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contenedor-login {
+            max-width: 430px;
+            margin: 60px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto 15px;
+        }
+
+        h2 {
+            color: #0B3D7A;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .descripcion {
+            text-align: center;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            color: #0B3D7A;
+            font-weight: 500;
+        }
+
+        .btn-ingresar {
+            background-color: #0B3D7A;
+            color: white;
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            margin-top: 10px;
+        }
+
+        .btn-ingresar:hover {
+            background-color: #1EADF0;
+            color: white;
+        }
+
+        .enlaces {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .enlaces a {
+            color: #0B3D7A;
+            text-decoration: none;
+        }
+
+        .enlaces a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="contenedor-login">
+
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo de EnferPacient" class="logo">
+            </a>
+
+            <h2>Ingreso de Enfermeros</h2>
+
+            <p class="descripcion">
+                Ingresa a tu cuenta para gestionar tus servicios de enfermería.
+            </p>
+
+            <form action="enfermero_login.php" method="POST">
+
+                <div class="mb-3">
+                    <label for="correo" class="form-label">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="correo"
+                        name="correo"
+                        placeholder="Ingresa tu correo"
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="contrasena" class="form-label">
+                        Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="contrasena"
+                        name="contrasena"
+                        placeholder="Ingresa tu contraseña"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn-ingresar">
+                    Iniciar sesión
+                </button>
+
+            </form>
+
+            <div class="enlaces">
+                <p>
+                    ¿Todavía no tienes una cuenta?
+                    <a href="enfermero_registro.html">Regístrate aquí</a>
+                </p>
+
+                <p>
+                    <a href="usuario_login.html">Ingreso de pacientes</a>
+                </p>
+
+                <p>
+                    <a href="index.html">Volver al inicio</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
